@@ -1,19 +1,58 @@
-# Gerenciador de Tarefas em Python 📝
+# 📝 Gerenciador de Tarefas em Python (Tkinter)
 
-Aplicativo desktop simples de gerenciamento de tarefas, desenvolvido em Python utilizando Tkinter.
+Aplicação desktop desenvolvida em Python utilizando **Tkinter**, com foco em organização de tarefas, persistência de dados e arquitetura em camadas.
 
-## Funcionalidades (em desenvolvimento)
-- Adicionar tarefas
-- Listar tarefas
-- Remover tarefas
-- Salvar tarefas localmente
+Este projeto foi criado com fins de estudo e portfólio, aplicando boas práticas de organização de código, orientação a objetos e versionamento com Git.
 
-## Tecnologias utilizadas
+---
+
+## 🚀 Funcionalidades
+
+- ✅ Adicionar tarefas
+- 🗑️ Excluir tarefas
+- ✔️ Marcar tarefas como concluídas (duplo clique)
+- 💾 Persistência de dados em arquivo JSON
+- 📜 Lista de tarefas com scrollbar
+- ⌨️ Atalho com tecla **Enter** para adicionar tarefas
+
+---
+
+## 🧱 Arquitetura do Projeto
+
+O projeto segue uma arquitetura em camadas, separando responsabilidades de forma clara:
+
+gerenciador-tarefas-python/
+│
+├── app/
+│ ├── models/ # Modelos de dados
+│ ├── services/ # Regras de negócio e persistência
+│ ├── ui/ # Interface gráfica (Tkinter)
+│ └── main.py # Ponto de entrada da aplicação
+│
+├── data/
+│ └── tasks.json # Armazenamento das tarefas
+│
+├── tests/ # Testes automatizados
+│
+└── README.md
+
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
 - Python 3
 - Tkinter
+- JSON
+- Git e GitHub
+- unittest (testes automatizados)
 
-## Como executar o projeto
+---
 
-1. Clone o repositório:
+## ▶️ Como Executar o Projeto
+
+### 1️⃣ Clone o repositório
+
 ```bash
-git clone https://github.com/seu-usuario/gerenciador-tarefas-python.git
+git clone https://github.com/DanielNathalia/gerenciador-tarefas-python.git
+cd gerenciador-tarefas-python

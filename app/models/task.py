@@ -3,9 +3,18 @@ class Task:
         self.title = title
         self.completed = completed
 
-    def to_dict(self):
-        return {"title": self.title, "completed": self.completed}
+    def toggle(self):
+        self.completed = not self.completed
 
-    @classmethod
-    def from_dict(cls, data):
-        return cls(title=data.get("title"), completed=data.get("completed", False))
+    def to_dict(self):
+        return {
+            "title": self.title,
+            "completed": self.completed,
+        }
+
+    @staticmethod
+    def from_dict(data):
+        return Task(
+            title=data["title"],
+            completed=data.get("completed", False),
+        )

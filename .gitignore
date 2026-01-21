@@ -1,5 +1,15 @@
+# Ambiente virtual
+.venv/
+
+# Arquivos do PyInstaller
+build/
+dist/
+*.spec
+
+# Cache Python
 __pycache__/
 *.pyc
-.env
-.venv/
-.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db
