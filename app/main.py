@@ -1,9 +1,5 @@
-from ui import iniciar_interface
+from app.ui.main_window import MainWindow
 
-
-def main():
-    iniciar_interface()
-
-
-if __name__ == "___main___":
-    main()
+if __name__ == "__main__":
+    app = MainWindow()
+    app.run()
