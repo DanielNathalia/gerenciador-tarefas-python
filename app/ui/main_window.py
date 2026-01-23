@@ -133,10 +133,12 @@ class MainWindow:
 
     def toggle_task(self, event):
         selected = self.listbox.curselection()
-        if selected:
-            index = selected[0]
-            self.service.toggle_task(index)
-            self.load_tasks()
+        if not selected:
+            return
+
+        index = selected[0]
+        self.service.toggle_task(index)
+        self.load_tasks()
 
     def run(self):
         self.root.mainloop()

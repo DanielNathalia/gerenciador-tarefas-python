@@ -21,8 +21,12 @@ class TaskService:
         root_dir = os.path.dirname(
             os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         )
+        # pasta do usuário (AppData)
+        base_dir = os.path.join(os.environ.get("LOCALAPPDATA"), "GerenciadorTarefas")
 
-        self.file_path = resource_path(os.path.join("data", "tasks.json"))
+        os.makedirs(base_dir, exist_ok=True)
+
+        self.file_path = resource_path(os.path.join(base_dir, "data", "tasks.json"))
 
         os.makedirs(os.path.dirname(self.file_path), exist_ok=True)
 
@@ -57,8 +61,7 @@ class TaskService:
             self.tasks.pop(index)
             self.save_tasks()
 
-
-def toggle_task(self, index):
-    if 0 <= index < len(self.tasks):
-        self.tasks[index].toggle()
-        self.save_tasks()
+    def toggle_task(self, index):
+        if 0 <= index < len(self.tasks):
+            self.tasks[index].toggle()
+            self.save_tasks()

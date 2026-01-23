@@ -6,5 +6,9 @@
     {
         "title": "Almoçar",
         "completed": false
+    },
+    {
+        "title": "Kickboxing",
+        "completed": true
     }
 ]
